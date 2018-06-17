@@ -1,0 +1,47 @@
+{% extends "_base.html" %}
+{% block body %}
+{% if article %}
+<article>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                    <a href="{{article.slug}}">
+                            <img src="/media/{{article.picture}}" class="media" alt=""/>
+              <h2 class="section-heading">{{article.name}}</h2>
+  
+              <p>{{article.description}}<p>
+              
+              <p>Placeholder text by
+                <a href="http://spaceipsum.com/">Space Ipsum</a>. Photographs by
+                <a href="https://www.flickr.com/photos/nasacommons/">NASA on The Commons</a>.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+  
+      <hr>
+<div class="row">
+    <div class="col-lg-8 col-md-10 mx-auto">
+        <section>
+            <h1>Commentaire</h1>
+        
+        {% for com in article.commentaires.all %}
+        <ul><h4>{{com.author}} {{com}}</h4> </ul>   
+        {% endfor %} 
+        
+        <form method="POST">
+            {% csrf_token %}
+            <div class="input-group">
+                {{form}}
+        
+            <input type="submit" class="form-control  btn-sm " value="Commenté">
+            
+            </div>
+        </form>
+</section>
+        
+        
+
+
+{% endif %}
+{% endblock %}

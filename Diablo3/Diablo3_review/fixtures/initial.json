@@ -1,0 +1,52 @@
+[
+
+    {
+        "model": "auth.user",
+        "pk": 1,
+        "fields": {
+            "is_superuser": true,
+            "username": "Frabius",
+            "first_name": "",
+            "last_name": "",
+            "email": "r.r@r.fr",
+            "is_staff": true,
+            "is_active": true
+        }
+    },
+    {
+        "model": "Diablo3_review.type",
+        "pk": 1,
+        "fields": {
+            "name": "Classe",
+            "slug": "classe"
+        }
+    },
+    {
+        "model": "Diablo3_review.myarticle",
+        "pk": 2,
+        "fields": {
+            "name": "Necromenseur",
+            "slug": "necro",
+            "author": 1,
+            "release_date": "2018-05-29T14:13:25.788Z",
+            "picture": "i4cimgpsh_orig.png",
+            "types": [
+                1
+            ]
+        }
+    },
+    {
+        "model": "Diablo3_review.myarticle",
+        "pk": 3,
+        "fields": {
+            "name": "Barbarian",
+            "slug": "barbar",
+            "author": 1,
+            "release_date": "2018-05-29T14:15:11.778Z",
+            "picture": "diablo-3-barbarian_NgfO3zC.jpg",
+            "types": [
+                1
+            ]
+        }
+    }
+]
